@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel ='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link href="./output.css" rel="stylesheet">
+</head>
+
+
+<body>
+  <!-- navbar -->   <!--it contains the logo , quick links , electron developers also menu bar -->
+
+
+
+  <nav class="p-3 flex justify-between items-centre">
+    <a href="" id="brand" class="flex gap-2 items-center">
+      <img src="./images/asset 0.png" alt="logo" class="object-cover max-w-15 max-h-12">
+      <span class="text-lg  font-semibold font-display">ToDesktop</span>    
+      <!--span is an inline element and div is a block element inline element writes on a single line whereas block elements on different lines -->
+    </a>
+
+
+
+  <div id="nav-menu", class="hidden lg:flex gap-12 py-3">
+    <a href="" class="font-display font-medium hover:text-primary">Pricing</a>
+    <a href="" class="font-display font-medium hover:text-primary">Docs</a>
+    <a href="" class="font-display font-medium hover:text-primary">Changelog</a>
+    <a href="" class="font-display font-medium hover:text-primary">Blogs</a>
+    <a href="" class="font-display font-medium hover:text-primary">Login</a>
+  </div>
+
+
+
+    <button class="hidden md:flex font-display font-medium border-2 rounded-md px-6 py-1 gap-2 items-center hover:border-black group">
+       <!--md should be along with flex   || item-center (spelling)-->
+      <img src="./images/asset 1.svg" alt="" class="">
+      <!--<i class="fa-solid fa-person size-5 j"></i>-->
+      Electron Developers
+      <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition duration-200"></i>
+    </button>
+
+
+
+    <button class="p-2 md:hidden" onclick="handleMenu()" >
+      <i class="fa-solid fa-bars hover:text-gray-500 border-2 px-0.5 py-0.5 "></i>
+    </button>
+
+
+
+    <!--inside the menu bar-->
+
+    <div id= "navmain" class="hidden   fixed lg:hidden bg-white inset-0 p-3 ">  <!--hidden written to default when the web first starts-->        
+      <div id="nav-bar" class="flex justify-between">  <!--carefull about which division takes which property MISTAKE MIGHT OCCUR-->
+         <!--lg gives the min length it will perform :this if it exceeds -->
+        
+        <a href="" id="nav-bar" class="flex gap-2 items-center">
+          <img src="./images/asset 0.png" alt="logo" class="object-cover max-w-15 max-h-12">
+          <span class="text-lg font-bold font-display">ToDesktop</span>   
+        </a>
+      
+
+        <button class="p-2 md:hidden" onclick="handleMenu()" >
+          <i class="fa-solid fa-xmark hover:text-gray-500 border-2 px-0.5 py-0.5 flex items-center "></i>
+        </button>
+
+
+
+      </div>
+      <div class="mt-6">
+        <a href="" class="font-display m-3 p-3 font-medium hover:bg-gray-300 block "><i class="fa-solid fa-tags px-3"></i>Pricing</a>
+        <!--block takes whole line unlike default inline-->
+        <a href="" class="font-display m-3 p-3 font-medium hover:bg-gray-300 block"><i class="fa-solid fa-file px-3"></i>Docs</a> 
+        <a href="" class="font-display m-3 p-3 font-medium hover:bg-gray-300 block"><i class="fa-solid fa-calendar-days px-3 "></i>Changelog</a> 
+        <a href="" class="font-display m-3 p-3 font-medium hover:bg-gray-300 block"><i class="fa-solid fa-pen-nib px-3"></i>Blog</a>  
+        <a href="" class="font-display m-3 p-3 font-medium hover:bg-gray-300 block"><i class="fa-solid fa-user px-3"></i>Login</a>  
+      </div>
+    <div class= "h-0.5 bg-gray-400"></div>
+
+
+      <button class=" mt-6 py-5 w-full flex font-display font-medium  gap-2 items-center hover:bg-gray-200"> <!--md should be along with flex   || item-center (spelling)-->
+        <img src="./images/asset 1.svg" alt="" class="">
+        Electron Developers
+        <!-- <i class="fa-solid fa-arrow-right"></i> -->
+      </button>
+
+    </div>
+
+   <!-- end of inside the menu bar-->
+
+
+  </nav>
+    <main>
+    <!--hero main section-->
+
+
+      <div id="hero-background" class="min-h-screen bg-gradient-to-b from-violet-100 via-red-200 to transparent flex flex-col " >
+
+        <div id="main-back" class="max-w-4xl mx-auto  px-6 pt-6 pb-32 flex flex-col sm:items-center">
+
+          <div id="whole-version-button" class="flex items-center my-6 gap-2 border border-yellow-500  bg-yellow-50  rounded-md  px-3 py-1 w-fit  
+                shadow-md hover:shadow-lg hover:-translate-y-2 transition duration-300 group">  <!--loook for fucking divisions -->
+            <div id="the-dot" class=" w-2 h-2 bg-yellow-400 rounded-full border border-yellow-500 "></div>
+              <p id="the-text" class="font-display font-medium text-yellow-600">v0.99.03<span class="text-yellow-900">: Find-in-page bug fixes</span></p>
+            <i class="fa-solid fa-arrow-right text-yellow-900 group-hover:translate-x-2 transition duration-300"></i>
+          </div>
+
+
+           <div id="hero-features" class=" mt-6 mb-3 hidden text-gray-600  sm:flex gap-4">
+              <div class="hover:text-black hover:text-xl transition duration-500">
+                <i class="fa-solid fa-file-code "></i>
+                Code Optional
+              </div>
+              <div  class="hover:text-black hover:text-xl">
+                <i class="fa-regular fa-hand"></i>
+                Drag & Drop builder
+              </div>
+              <div  class="hover:text-black hover:text-xl">
+                <i class="fa-brands fa-windows"></i>
+                Windows,Mac,Linux
+              </div>
+           </div>
+
+
+          <h1 class="text-4xl text-gray-950 font-semibold leading-snug mt-4 text-center sm:text-5xl">Web app to desktop app <br> in minutes</h1>
+          <div class="text-1xl py-4 text-gray-800 sm:text-2xl text-center "><p class="">Take your web app codebase and transform it into a cross platform desktop app with native functionality.</p></div>
+          
+          <div id="button-container" class="  gap-2 mt-6 flex flex-col md:flex-row" >
+              <button class=" px-6 py-3 font-semibold rounded-md text-white bg-primary hover:opacity-70">Download now</button>
+              <button class=" px-6 py-3 font-semibold rounded-md text-black bg-white border hover:text-gray-600 hover:border-gray-950 border-gray-400">Read Docs</button>
+          </div>
+
+
+        </div>
+          <div>
+
+            <div id="companies" class="flex justify-center gap-3">
+              <i class="fa-solid fa-arrow-turn-down translate-y-3 -scale-x-100"></i>
+              <span class="font-display text-gray-700" >APPS POWERED BY DESKTOP</span>
+              <i class="fa-solid fa-arrow-turn-down translate-y-3"></i>
+            </div>
+
+
+            <div id="line-of-apps">
+              <div id="line1">
+
+              </div>
+              <div id="line2">
+
+              </div>
+              <div id="line3">
+
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="h-[1000px]"></div>
+    </main>
+</body>
+<script src="script.js"></script>  <!--this should definitely be written to connect javascript with html-->
+</html>
+ 
